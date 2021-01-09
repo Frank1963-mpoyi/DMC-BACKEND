@@ -16,13 +16,7 @@ BASE_DIR = os.path.dirname(
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ek!i6f1zu48k055)a#bo0e8hh@g)msp##z@xlc=9udz-^$cqm@'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
 SECRET_KEY      = config('SECRET_KEY')
 
 ALLOWED_HOSTS   = ['127.0.0.1', 'mpoyi.herokuapp.com']
@@ -42,7 +36,7 @@ INSTALLED_APPS = [
     
     
     #Project Apps
-    'blog.app.BlogConfig'
+    'transport.apps.system.blog'
 ]
 
 MIDDLEWARE = [

@@ -246,19 +246,19 @@ a:hover{
 }
 
 .slide:nth-child(1){
-    background-image: url("./images/point.jpg"); 
+    background-image: url("static/images/point.jpg"); 
 
 }
 
 
 .slide:nth-child(2){
-    background-image: url("./images/water.jpg"); 
+    background-image: url("static/images/water.jpg"); 
 
 }
 
 
 .slide:nth-child(3){
-    background-image: url("./images/safari.jpg"); 
+    background-image: url("static/images/safari.jpg"); 
 
 }
 

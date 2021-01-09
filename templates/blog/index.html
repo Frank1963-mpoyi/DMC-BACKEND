@@ -1,48 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<!DOCTYPE html>
-<html lang="en">
+    {% extends  'base.html' %}
+    {% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>western cape -dmc</title>
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-    
-    <!-- Smooth Scroll -->
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    
-    <!-- Jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
-    
-    <!-- Local Css -->
-    <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
-    <!-- paste font awesome cdn js here -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-</head>
-
-<body>
-    <!-- nav bar -->
-    <nav>
-        <ul class="menu">
-            <li class="logo"><a href="#">WC DMC</a></li>
-            <li class="item"><a href="#footer">CONTACT US</a></li>
-            <li class="item"><a href="#feature">ABOUT</a></li>
-            <li class="item"><a href="#service">SERVICE</a></li>
-            <li class="item button"><a href="#">LOGIN</a></li>
-            <!-- these 2 will give them extra class because we will design them different-->
-            <li class="item button secondary"><a href="#">SIGN UP</a></li>
-            <li class="toggle"><span class="bars"></span></li>
-            <!--humberger menu it must be empty because we design humberger-->
-        </ul>
-    </nav>
-    <!-- end nav bar -->
-
+    {% block content %}
     <!-- Slider image -->
     <div class="slider">
         <div class="slides">
@@ -139,7 +100,7 @@ quisquam asperiores!</p> -->
             </div>
 
             <div class="features-img">
-                <img src="images/fleet1.jpg" alt="">
+                <img src="{% static 'images/fleet1.jpg' %}" alt="">
             </div>
         </div>
 
@@ -154,7 +115,7 @@ quisquam asperiores!</p> -->
         </div>
         <div class="service-box">
             <div class="single-service">
-                <img src="images/pinsula.jpg" alt="">
+                <img src="{% static 'images/pinsula.jpg' %}" alt="">
                 <div class="overlay"></div>
 
                 <div class="service-desc">
@@ -168,7 +129,7 @@ quisquam asperiores!</p> -->
                 </div>
             </div>
             <div class="single-service">
-                <img src="images/city.jpg" alt="">
+                <img src="{% static 'images/city.jpg' %}" alt="">
                 <div class="overlay"></div>
                 <div class="service-desc">
                     <h3>CAPE TOWN CITY TOUR</h3>
@@ -181,7 +142,7 @@ quisquam asperiores!</p> -->
                 </div>
             </div>
             <div class="single-service">
-                <img src="images/shark.jpg" alt="">
+                <img src="{% static 'images/shark.jpg' %}" alt="">
                 <div class="overlay"></div>
                 <div class="service-desc">
                     <h3>SHARK CAGE DIVING</h3>
@@ -197,7 +158,7 @@ quisquam asperiores!</p> -->
             </div>
 
             <div class="single-service">
-                <img src="images/wineland.jpg" alt="">
+                <img src="{% static 'images/wineland.jpg' %}" alt="">
                 <div class="overlay"></div>
                 <div class="service-desc">
                     <h3>WINELANDS TOUR</h3>
@@ -212,7 +173,7 @@ quisquam asperiores!</p> -->
             </div>
 
             <div class="single-service">
-                <img src="images/muizenberg.jpg" alt="">
+                <img src="{% static 'images/muizenberg.jpg' %}" alt="">
                 <div class="overlay"></div>
                 <div class="service-desc">
                     <h3>PENINSULA TOUR</h3>
@@ -228,7 +189,7 @@ quisquam asperiores!</p> -->
 
             <div class="single-service">
                 <!--position :relative for parent-->
-                <img src="images/whale.jpg" alt="">
+                <img src="{% static 'images/whale.jpg' %}" alt="">
                 <div class="overlay"></div>
                 <!--position relative for child and you can start to move child any where you want -->
                 <div class="service-desc">
@@ -252,7 +213,7 @@ quisquam asperiores!</p> -->
 
     <!-- Footer -->
     <section id="footer">
-        <img src="images/bmw.jpg" alt="footer pict" class="footer-img">
+        <img src="{% static 'images/bmw.jpg' %}" alt="footer pict" class="footer-img">
         <div class="title-text">
             <p>CONTACT US</p>
             <!-- <h1>Visit Shop Today</h1> -->
@@ -283,33 +244,4 @@ quisquam asperiores!</p> -->
 
 
     </section>
-
-
-
-
-
-
-    <script src="app.js"></script>
-    <script>
-
-        $(function () {
-
-            $(".toggle").on("click", function () {
-
-                if ($(".item").hasClass("active")) {
-                    $(".item").removeClass("active");
-                }
-                else {
-                    $(".item").addClass("active");
-                }
-            })
-        });
-
-
-        // All animations will take exactly 500ms
-        var scroll = new SmoothScroll('a[href*="#"]', {
-            speed: 1500,
-            speedAsDuration: true
-        });
-    </script>
-</body>
+{% endblock %}
