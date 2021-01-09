@@ -120,7 +120,7 @@ USE_TZ          = True
 
 
 BASE_PATH       = os.path.join(BASE_DIR)
-APP_STATIC      = 'restaurant/static/'
+APP_STATIC      = 'transport/static/'
 
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR, 'static')
