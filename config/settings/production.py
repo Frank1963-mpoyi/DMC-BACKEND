@@ -7,7 +7,7 @@ from        decouple            import          config
 
 DEBUG               = config('DEBUG')
 
-ALLOWED_HOSTS       = ['127.0.0.1', 'mpoyi.herokuapp.com']
+ALLOWED_HOSTS       = ['127.0.0.1', 'westerncapedmc.herokuapp.com']
 
 
 DATABASES['default'] =  dj_database_url.config()
