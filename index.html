@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>western cape -dmc</title>
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    
+    <!-- Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    
+    <!-- Local Css -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- paste font awesome cdn js here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+
+<body>
+    <!-- nav bar -->
+    <nav>
+        <ul class="menu">
+            <li class="logo"><a href="#">WC DMC</a></li>
+            <li class="item"><a href="#footer">CONTACT US</a></li>
+            <li class="item"><a href="#feature">ABOUT</a></li>
+            <li class="item"><a href="#service">SERVICE</a></li>
+            <li class="item button"><a href="#">LOGIN</a></li>
+            <!-- these 2 will give them extra class because we will design them different-->
+            <li class="item button secondary"><a href="#">SIGN UP</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+            <!--humberger menu it must be empty because we design humberger-->
+        </ul>
+    </nav>
+    <!-- end nav bar -->
+
+    <!-- Slider image -->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <div class="slide-data">
+                    <h1> cape point tour</h1>
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae ratione voluptatum quos
+reiciendis officiis ut fugit neque quasi delectus ea veritatis recusandae temporibus quod,
+dolorum distinctio nemo nobis aperiam eum!</p> -->
+                    <!-- <button>SUBSCRIBE</button> -->
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slide-data">
+                    <h1>water front</h1>
+                    <!-- <p>join us as we travel around the cape peninsula and encouter beautiful beaches, dramatic scenery,
+the mythical meeting place of the two oceans, local woldlife
+</p> -->
+                    <!-- <button>COMMENT</button> -->
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slide-data">
+                    <h1> safari tour</h1>
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolorem quidem. Recusandae
+enim nam id, et, eum nihil laborum repellendus nobis, quae dolorem ea labore a praesentium quo
+quisquam asperiores!</p> -->
+                    <!-- <button>SHARE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <button class="arrows prev" onclick="plusslide(-1)">
+            <span><i class="fas fa-angle-left"></i></span>
+        </button>
+
+        <button class="arrows next" onclick="plusslide(1)">
+            <span><i class="fas fa-angle-right"></i></span>
+        </button>
+
+        <div class="dots">
+            <span onclick="currentslide(1)"></span>
+            <span onclick="currentslide(2)"></span>
+            <span onclick="currentslide(3)"></span>
+        </div>
+    </div>
+
+    <div class="title">
+        <h1>WESTERN CAPE  ~ DESTINATION MANAGEMENT COMPANY</h1>
+    </div>
+    <!-- Features -->
+    <section id="feature">
+        <div class="title-text">
+            <p>Innovation in travel </p>
+            <!-- <h1>Why Choose western cape <br>destination management company</h1> -->
+        </div>
+
+        <div class="feature-box">
+            <div class="features">
+                <h1>our fleet</h1>
+                <div class="feature-desc">
+                    <div class="feature-icon">
+                        <i class="fa fa-shield"></i>
+                    </div>
+                    <div class="feature-text">
+                        <p>our fleet of vehicles range from 60, 52, 32 and 22 seater busses, latest
+                            SUV vehicles, and luxury BMW/ MERCEDES sedans. wC-DMC is your one stop shop for your
+                            ultimate in convinience,
+                            peace of mind, and most of all, premium top quality service.our relationship with all
+                            the various 5 star, 4 star and 3 star
+                            hotels in the werstern cape puts in the unique position to offer you the lowest possible
+                            packages in the travel industry</p>
+                    </div>
+
+                </div>
+
+                <h1>Experienced staff</h1>
+                <div class="feature-desc">
+                    <div class="feature-icon">
+                        <i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="feature-text">
+                        <p>my team consists of highly motivated, creative and experienced professionals with its
+                            main aim to find
+                            solutions to your travel desires
+                            at WC-DMC, we beleive that exceptional service comes from the heart, and that is what
+                            truly makes our
+                            business human.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="features-img">
+                <img src="images/fleet1.jpg" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- service -->
+
+    <section id="service">
+        <div class="title-text">
+            <!-- <p> services </p> -->
+            <h1>See Our List Of Tours And Packages On Offer</h1>
+        </div>
+        <div class="service-box">
+            <div class="single-service">
+                <img src="images/pinsula.jpg" alt="">
+                <div class="overlay"></div>
+
+                <div class="service-desc">
+                    <h3>PRIVATE SAFARI TOURS</h3>
+                    <hr>
+                    <p> Aquila Private Game reserve is situated under two hours drive from
+                        cape town, is the ultimate Africa safari getaway. The safari
+                        is lead by an experienced guide, who will share inside-story facts
+                        about your surroundings.
+                    </p>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="images/city.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="service-desc">
+                    <h3>CAPE TOWN CITY TOUR</h3>
+                    <hr>
+                    <p>Encouter unique cultures, architecture, historical sights and
+                        unforgettable scenery as we travel through South Africa's oldest city - affectionately
+                        known as the Mother City
+
+                    </p>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="images/shark.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="service-desc">
+                    <h3>SHARK CAGE DIVING</h3>
+                    <hr>
+                    <p>
+                        a great white shark is a formidable sight at a 
+                        distance, now imagine coming nose to nose with one! 
+                        this once in a lifetime experience is not for the faint 
+                        hearted and not to be missed... this is a full day tour.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="single-service">
+                <img src="images/wineland.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="service-desc">
+                    <h3>WINELANDS TOUR</h3>
+                    <hr>
+                    <p>the world-famous cape vineyards are a visual feast of lush green valleys, rugged mountains
+                        and
+                        fine cuisine.
+                        the dramatic scenery forms a backdrop to the unique cape Dutch architecture.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="single-service">
+                <img src="images/muizenberg.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="service-desc">
+                    <h3>PENINSULA TOUR</h3>
+                    <hr>
+                    <p>the world-famous cape vineyards are a visual feast of lush green valleys, rugged mountains
+                        and
+                        fine cuisine.
+                        the dramatic scenery forms a backdrop to the unique cape Dutch architecture.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="single-service">
+                <!--position :relative for parent-->
+                <img src="images/whale.jpg" alt="">
+                <div class="overlay"></div>
+                <!--position relative for child and you can start to move child any where you want -->
+                <div class="service-desc">
+                    <h3>WALE WATCHING</h3>
+                    <hr>
+                    <p>
+                        Situated between the mountain and the sea,
+                        the beautiful seaside town of hermanus has been rated
+                        by the world wildlife fund (WWF)as one of the twelve best whale 
+                        watching locations in the world, and it is often referred to as the heart of the whale
+                        route
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- End service  -->
+
+    <!-- Footer -->
+    <section id="footer">
+        <img src="images/bmw.jpg" alt="footer pict" class="footer-img">
+        <div class="title-text">
+            <p>CONTACT US</p>
+            <!-- <h1>Visit Shop Today</h1> -->
+        </div>
+
+        <div class="footer-raw">
+            <div class="footer-left">
+                <h1>Opening Hours</h1>
+                <p><i class="fa fa-clock-o"></i>Monday to Friday 7am to 11 pm</p>
+                <p><i class="fa fa-clock-o"></i>Saturday and sunday 8am to 11pm</p>
+            </div>
+            <div class="footer-right">
+                <h1>Get in Touch</h1>
+                <p>#Company address<i class="fa fa-map-marker"></i></p>
+                <p>info@wcdmc.co.za<i class="fa fa-paper-plane"></i></p>
+                <p>+27 (0) 678-068-388<i class="fa fa-phone"></i></p>
+
+            </div>
+        </div>
+
+        <div class="social-links">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-youtube-play"></i>
+            <!-- <p>Copyright Frank Mpoyi Tshibuyi</p> -->
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <script src="app.js"></script>
+    <script>
+
+        $(function () {
+
+            $(".toggle").on("click", function () {
+
+                if ($(".item").hasClass("active")) {
+                    $(".item").removeClass("active");
+                }
+                else {
+                    $(".item").addClass("active");
+                }
+            })
+        });
+
+
+        // All animations will take exactly 500ms
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1500,
+            speedAsDuration: true
+        });
+    </script>
+</body>
