@@ -31,11 +31,14 @@ a{
 
 a:hover{
     text-decoration: underline;
+    color: lightgrey;
 }
 
+
 .menu li{
-    font-size: 16px;
+    font-size: 20px;
     padding: 15px 5px;
+    font-weight: 500;
 
 }
 
@@ -46,6 +49,7 @@ a:hover{
 
 .logo a {
     font-size: 20px;
+    text-decoration: none;
 }
 
 .button .secondary{
@@ -246,19 +250,19 @@ a:hover{
 }
 
 .slide:nth-child(1){
-    background-image: url("static/images/point.jpg"); 
+    background-image: url("/static/images/point.jpg"); 
 
 }
 
 
 .slide:nth-child(2){
-    background-image: url("static/images/water.jpg"); 
+    background-image: url("/static/images/water.jpg"); 
 
 }
 
 
 .slide:nth-child(3){
-    background-image: url("static/images/safari.jpg"); 
+    background-image: url("/static/images/safari.jpg"); 
 
 }
 
@@ -423,14 +427,19 @@ a:hover{
 
 }
 
+.title-text .titre {
+    text-transform: uppercase;
+
+}
+
 .title{
     text-align: center;
     color: #fff;
     font-weight: 100;
     background: #009688;
-    padding: 20px;
+    padding: 45px;
     /* font-family: 'East Sea Dokdo', cursive; */
-    font-family: 'Redressed', cursive;
+    font-family: 'Kaushan Script', cursive; 
 }
 
 .feature-box{
@@ -440,11 +449,14 @@ a:hover{
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
+   
     
 }
 
 .features{
     flex-basis: 48%;
+    position: relative;
+    top: 15px;
 }
 
 .features-img{
@@ -453,9 +465,10 @@ a:hover{
 }
 
 .features-img img{
-    width: 100%;
-    height: 500px;
+    width: 112%;
+    height: 600px;
     border-radius: 10px;
+    
 }
 
 .features h1 {
@@ -464,6 +477,7 @@ a:hover{
     font-weight: 100;
     color: #009688;
     font-size: 18px;
+
 }
 
 .feature-text p{
@@ -474,9 +488,11 @@ a:hover{
 
 .feature-desc{
     display: flex;
-
+    width: 100%;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    position: relative;
+    right: 0px;
 }
 
 .feature-icon .fa{
@@ -499,6 +515,14 @@ a:hover{
         font-size: 14px;
         text-transform: uppercase;
     }
+
+        
+    .title-text .titre {
+        text-transform: uppercase;
+        font-size: 18px;
+
+
+    }
     .features{
         margin-top: 0px;
         flex-basis: 100%;
@@ -508,11 +532,12 @@ a:hover{
     .features-img{
         flex-basis: 100%;
         margin: auto;
+    
     }
     
     .features-img img{
         width: 100%;
-        height: 200px;
+        height: 380px;
         border-radius: 10px;
     }
     
@@ -546,13 +571,13 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: auto;
+    /* margin: auto; */
     
 }
 
 
 .single-service{
-    flex-basis:30%; /* 2service in 1 row*/
+    flex-basis: 20%; /* 2service in 1 row*/
     text-align: center;
     border-radius: 7px;
     margin-bottom: 20px;
@@ -562,9 +587,9 @@ a:hover{
 }
 
 .single-service img{
-    width: 100%;
+    width: 335px;
     border-radius: 7px;
-    height: 280px;  
+    height: 200px;  
 }
 
 
@@ -609,8 +634,12 @@ hr{
     font-size: 12px;
 }
 
+.service-desc h3{
+    font-size: 13px;
+}
+
 .single-service:hover .service-desc {
-    bottom: 20%;
+    bottom: 18%;
     opacity: 1;
 
     
@@ -621,13 +650,17 @@ hr{
     .single-service img{
         width: 100%;
         border-radius: 7px;
-        height: 200px; 
+        height: 250px; 
     }
     
+    .title-text h1 {
+        font-size: 18px;
+
+    }
 
     .single-service{
         flex-basis:100%;
-        margin-bottom: 0px;
+        margin-bottom: 5px;
     }
 
     .service-desc p{
@@ -719,10 +752,10 @@ hr{
 /* Footer */
 
 #footer {
-    padding: 100px 0 20px;
+    padding: 70px 0 18px;
     /* background: #efefef; */
     position: relative;
-    background: #E8E8E8;
+    background:#009688
     /* background:#009688 ; */
 }
 
@@ -744,22 +777,31 @@ hr{
     text-align: right;
 }
 
-.footer-right, .footer-left p{
+.footer-right ,.footer-left p{
     font-size: 19px;
+    color: #fff;
 }
 
  .footer-left h1{
     font-size: 25px;
+    color: #fff;
 
 }
 
+.footer-left p {
+    font-size: 19px;
+    color: #fff;
+
+}
 
 .footer-right h1{
     font-size: 25px;
+    color: #fff;
 
 }
 .footer-raw h1{
     margin: 10px 0;
+    color: #fff;
 }
 
 .footer-raw p{
@@ -797,6 +839,7 @@ hr{
     color: 009688;
     cursor: pointer;
     transition: .5s;
+    color: #fff;
 }
 
 .social-links .fa:hover{
