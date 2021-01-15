@@ -1,6 +1,6 @@
 
 import configparser
-
+import      dj_database_url
 from .base import *
 
 
@@ -18,29 +18,44 @@ DEBUG = True
 
 # DATABASE_ROUTERS = ['config.router.AuthRouter']
 
-# CONFIG_DIR = os.path.join(BASE_DIR, 'config/')
 
-# parser = configparser.ConfigParser()
-# parser.read_file(open(os.path.join(CONFIG_DIR, 'app.ini')))
 
+#DATABASE = {'default': dj_database_url.config(default='postgres://postgres:paulin63@localhost:5432/capetowndmc')}
+
+
+
+CONFIG_DIR = os.path.join(BASE_DIR, 'config/')
+
+parser = configparser.ConfigParser()
+parser.read_file(open(os.path.join(CONFIG_DIR, 'app.ini')))
+
+#DATABASES = {}
+
+
+#Done with postgresql 
+DATABASES = {
+    'default': {
+        'ENGINE'    : 'django.db.backends.postgresql',
+        'NAME'      : parser.get('capetowndmc', 'name'),
+        'USER'      : parser.get('capetowndmc', 'user'),
+        'PASSWORD'  : parser.get('capetowndmc', 'password'),
+        'HOST'      : parser.get('capetowndmc', 'host') or '127.0.0.1',
+        'PORT'      : parser.getint('capetowndmc', 'port') or '5432',
+
+    }
+}
+
+
+
+# Tried with Sqlite3 database
 # DATABASES = {
 #     'default': {
-#         'ENGINE'    : 'django.db.backends.postgresql',
-#         'NAME'      : parser.get('restaurant', 'name'),
-#         'USER'      : parser.get('restaurant', 'user'),
-#         'PASSWORD'  : parser.get('restaurant', 'password'),
-#         'HOST'      : parser.get('restaurant', 'host'),
-#         'PORT'      : parser.getint('restaurant', 'port'),
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 #DEBUG TOOLBAR SETTINGS
 # DEBUG_TOOLBAR_PANELS = [

@@ -1,7 +1,8 @@
 
 import      os                                  
 from        decouple      import    config
-
+import      dj_database_url
+import configparser
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(
@@ -73,12 +74,14 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+
+CONFIG_DIR = os.path.join(BASE_DIR, 'config/')
+
+parser = configparser.ConfigParser()
+parser.read_file(open(os.path.join(CONFIG_DIR, 'app.ini')))
+
+DATABASES = {}
+
 
 
 # Password validation
