@@ -44,7 +44,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 BASE_PATH       = os.path.join(BASE_DIR)
-APP_STATIC      = 'restaurant/static/'
+APP_STATIC      = 'transport/static/'
 
 STATIC_URL      = '/static/'
 STATIC_ROOT     = os.path.join(BASE_PATH, APP_STATIC)
