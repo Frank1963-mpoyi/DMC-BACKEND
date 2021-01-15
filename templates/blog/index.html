@@ -107,149 +107,32 @@ quisquam asperiores!</p> -->
     </section>
 
     <!-- service -->
-
+   
     <section id="service">
         <div class="title-text">
             <!-- <p> services </p> -->
             <h1>See Our List Of Tours And Packages On Offer</h1>
         </div>
-        <div class="service-box ">
-            <div class="single-service ">
-                <img src="{% static 'images/pinsula.jpg' %}" alt="">
-                <div class="overlay"></div>
 
+        
+       
+        <div class="service-box "> 
+            {% for dest in dests %}
+            <div class="single-service {% if dest.dsm %} d-none d-sm-block {% endif %}">             
+                
+                <img src="{{ dest.image.url }}" alt="" >
+                <div class="overlay"></div>
                 <div class="service-desc">
-                    <h3>PRIVATE SAFARI TOURS</h3>
-                    <hr>
+                    <h3>{{ dest.title }}</h3>
+                    <hr> 
                     <p> </p>
                 </div>
             </div>
-            <div class="single-service">
-                <img src="{% static 'images/city.jpg' %}" alt="">
-                <div class="overlay"></div>
-                <div class="service-desc">
-                    <h3>CAPE TOWN CITY TOUR</h3>
-                    <hr>
-                    <p></p>
-                </div>
-            </div>
-            <div class="single-service">
-                <img src="{% static 'images/shark.jpg' %}" alt="">
-                <div class="overlay"></div>
-                <div class="service-desc">
-                    <h3>SHARK CAGE DIVING</h3>
-                    <hr>
-                    <p> </p>
-                </div>
-            </div>
-
-            <div class="single-service">
-                <img src="{% static 'images/wineland.jpg' %}" alt="">
-                <div class="overlay"></div>
-                <div class="service-desc">
-                    <h3>WINELANDS TOUR</h3>
-                    <hr>
-                    <p> </p>
-                </div>
-            </div>
-
-            <div class="single-service d-none d-sm-block">
-                <img src="{% static 'images/muizenberg.jpg' %}" alt="">
-                <div class="overlay"></div>
-                <div class="service-desc">
-                    <h3>PENINSULA TOUR</h3>
-                    <hr>
-                    <p> </p>
-                </div>
-            </div>
-
-            <div class="single-service d-none d-sm-block ">
-                <!--position :relative for parent-->
-                <img src="{% static 'images/whale.jpg' %}" alt="">
-                <div class="overlay"></div>
-                <!--position relative for child and you can start to move child any where you want -->
-                <div class="service-desc">
-                    <h3>WALE WATCHING</h3>
-                    <hr>
-                    <p> </p>
-                </div>
-            </div>
-
-            <div class="single-service d-none d-sm-block">
-                <!--position :relative for parent-->
-                <img src="{% static 'images/simola1.jpg' %}" alt="">
-                <div class="overlay"></div>
-                <!--position relative for child and you can start to move child any where you want -->
-                <div class="service-desc">
-                    <h3>SIMOLA TOUR</h3>
-                    <hr>
-                    <p> </p>
-                </div>
-            </div>
-
-            <div class="single-service d-none d-sm-block">
-                <!--position :relative for parent-->
-                <img src="{% static 'images/best.jpg' %}" alt="">
-                <div class="overlay"></div>
-                <!--position relative for child and you can start to move child any where you want -->
-                <div class="service-desc">
-                    <h3>BEST OF CAPE PENINSULA</h3>
-                    <hr>
-                    <p> </p>
-                </div>
-            </div>
-
-            <div class="single-service d-none d-sm-block">
-                <!--position :relative for parent-->
-                <img src="{% static 'images/sunset.jpg' %}" alt="">
-                <div class="overlay"></div>
-                <!--position relative for child and you can start to move child any where you want -->
-                <div class="service-desc">
-                    <h3> SUNSET</h3>
-                    <hr>
-                    <p> </p>
-                </div>
-            </div>
-
-            <div class="single-service d-none d-sm-block">
-                <!--position :relative for parent-->
-                <img src="{% static 'images/false bay.jpg' %}" alt="">
-                <div class="overlay"></div>
-                <!--position relative for child and you can start to move child any where you want -->
-                <div class="service-desc">
-                    <h3>FALSE BAY TOUR</h3>
-                    <hr>
-                    <p> </p>
-                </div>
-            </div>
-
-            <div class="single-service d-none d-sm-block">
-                <!--position :relative for parent-->
-                <img src="{% static 'images/helicopter.jpg' %}" alt="">
-                <div class="overlay"></div>
-                <!--position relative for child and you can start to move child any where you want -->
-                <div class="service-desc">
-                    <h3>HELICOPTER TOUR</h3>
-                    <hr>
-                    <p> </p>
-                </div>
-            </div>
-
-            <div class="single-service d-none d-sm-block">
-                <!--position :relative for parent-->
-                <img src="{% static 'images/golf.jpg' %}" alt="">
-                <div class="overlay"></div>
-                <!--position relative for child and you can start to move child any where you want -->
-                <div class="service-desc">
-                    <h3>GOLF TOUR</h3>
-                    <hr>
-                    <p> </p>
-                </div>
-            </div>
-
+            {% endfor %}
         </div>
-
+        
     </section>
+   
     <!-- End service  -->
 
     <!-- Footer -->
@@ -285,4 +168,13 @@ quisquam asperiores!</p> -->
 
 
     </section>
+
+
+
+    
+   
+
+    
 {% endblock %}
+
+
