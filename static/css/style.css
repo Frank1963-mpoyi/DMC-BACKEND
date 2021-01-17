@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap'); */
+
 @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Redressed&display=swap');
 
 
@@ -12,202 +12,89 @@ body{
     font-family: sans-serif;
 }
 
-nav {
-    background: #009688;
-    padding: 5px 20px;
-    /* position: sticky;
-    top: 0%;  */
+
+
+/* ==================NAVBAR =========================== */
+#nav-bar{
+    position: sticky; 
+    top: 0;
+    z-index: 10;
+}
+
+
+.navbar {
+    background :#009688;
+    padding: 10px;
+    
 
 }
 
-ul {
-    list-style: none; 
+
+.navbar-brand img{
+    height: 40px;
+    padding-left: 20px;
+
 }
 
-a{
-    color: white;
-    text-decoration: none; 
+.navbar .navbar-brand  {
+    color: #fff;
+    font-family: 'Kaushan Script', cursive; 
+    font-size: 25px;
+    margin-left: 15px;
 }
 
-a:hover{
-    text-decoration: underline;
+.navbar .navbar-brand:hover {
     color: lightgrey;
 }
 
 
-.menu li{
-    font-size: 20px;
-    padding: 15px 5px;
-    font-weight: 500;
-
-}
-
-.menu li a {
-    display: block; 
-
-}
-
-.logo a {
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.button .secondary{
-    border-bottom: 1px #444 solid;
-}
-
-/* MOBILE MENU */
-
-.menu{
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-    align-items: center;
-
-}
-
-.toggle{
-    order: 1;
-}
-
-.item.button{
-    order: 2;
-}
-
-.item{
-    width: 100%;
-    text-align: center;
-    order: 3; 
-    display: none;
-}
-
-.item.active{
-    display: block;
-}
-
-.toggle{
-    cursor: pointer;
-
-}
-
-.bars{ 
-    /* background: #999; */
-    margin-bottom: 5px;
-    background: #fff;
-    display: inline-block;
-    height: 2px;
-    position: relative;
-    width: 18px;
-}
-
-.bars::before, .bars::after{
-    /* background: #999;  */
-    background: #fff;
-    content: ""; 
-    display: inline-block;
-    height: 2px;
-    position: absolute; 
-    width: 18px;
-
-}
-
-.bars::before{ 
-    top: 5px;
-}
-
-.bars::after{
-    top: -5px;
-}
-
-/* TABLET MENU */
-
-@media all and (min-width:468px){
-    .menu{
-        justify-content: center;
-
-    }
-    .logo{
-        flex: 1;
-    }
-
-    .item.button{
-        width: auto;
-        order: 1;
-        display: block;
-    }
-
-    .toggle{ 
-        order: 2;
-    }
-
-    .button.secondary{
-        border: 0;
-    }
-
-    .button a {
-        text-decoration: none;
-        padding: 7px 15px;
-        background: teal;
-        border: 1px solid #006d6d;
-        border-radius: 50em;
-    }
-
-    .button.secondary a{
-        background: transparent;
-    }
-
-    .button a:hover {
-        transition: all .25s;
-    }
-
-    .button:not(.secondary) a:hover{ 
-        background: #006d6d;
-        border-color: #005959;
-    }
-
-    .button.secondary a:hover{
-        color: #ddd;
-    }
 
 
-}
-
-/* DESKTOP MENU */
-
-@media all and (min-width: 768px){
-    .item{
-        display:block;
-        width: auto;
-    }
-
-    .toggle{
-        display: none;
-    }
-
-    .logo {
-        order: 0;
-    }
-
-    .item{
-        order: 1;
-    }
-
-    .button{
-        order: 2;
-    }
-
-    .menu li{
-        padding: 15px 10px;
-    }
-
-    .menu li.buttom{
-        padding-right: 0;
-    }
+@media screen and (max-width: 520px) {
     
+    .navbar .navbar-brand  {
+        color: #fff;
+        font-family: 'Kaushan Script', cursive; 
+        font-size: 15px;
+    
+    }
+}
+    
+/* for list */
 
+
+.navbar-nav li {
+    padding: 0 10px;
+    margin-left: 5px;
 
 }
-/* End nav bar */
+
+
+.navbar-nav   li a:hover
+{
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+}
+
+
+
+.navbar-nav li a {
+    color: #fff !important;
+    font-weight: 600;
+    
+    text-align: center;
+}
+
+/* change toggler for small device */
+.fa-bars{
+    color: #fff;
+    font-size: 30 !important;
+}
+
+.navbar-toggler{
+    outline: none !important;
+}
+
 
 /* Slider image */
 .slider{
@@ -368,7 +255,6 @@ a:hover{
     }
 
     .slide-data p {
-       
         font-size: 18px;
         margin-bottom: 0px;
     }
@@ -386,19 +272,33 @@ a:hover{
 
 }
 
-.title-text{
+.title-dmc h1 {
+    text-align: center;
+    background: #009688; 
+    padding: 35px;
+    font-family: 'Kaushan Script', cursive; 
+    color: #fff;
+    font-size: 40px;
+}
+
+
+/* leaf start */
+
+.title-text {
     text-align: center;
     padding-bottom: 70px;
+    text-transform: uppercase;
+    font-size: 30px;
     
-    
-    
-}
+} 
+
+
 .title-text p{
     margin: auto;
     /* font-size: 108px; */
     color: #009688;
     font-weight: bold;
-    position: relative; /* parent position is renlative*/
+    position: relative; 
     z-index: 1;
     display: inline-block;
     margin-bottom: 12px;
@@ -406,29 +306,28 @@ a:hover{
     
 }
 
+/* this 3 below look like leaf*/
 .title-text p::after{
     content:"";
-    width: 50px;
-    height: 35px;
+    width: 60px;
+    height: 45px;
     background: linear-gradient(#019587,#fff);
-    position: absolute; /* absolute position compare to the parent and it can be moved anuwhere*/
+    position: absolute;
     top: -20px;
     left: 0;
     z-index: -1;
-    /* this 3 below look like leaf*/
-    transform: rotate(10deg);
+    transform: rotate(5deg);
     border-top-left-radius: 35px;
     border-bottom-right-radius: 35px;
 }
+
+
+/* end leaf */
+
 .title-text h1{
     font-size: 30px;
     text-transform: uppercase;
     /* color: #009688; */
-
-}
-
-.title-text .titre {
-    text-transform: uppercase;
 
 }
 
@@ -449,7 +348,7 @@ a:hover{
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
-   
+
     
 }
 
@@ -507,12 +406,24 @@ a:hover{
 }
 
 
+@media screen and (max-width: 520px) {
+        
+    .title-dmc h1 {
+        text-align: center;
+        background: #009688; 
+        padding: 5px;
+        font-family: 'Kaushan Script', cursive; 
+        color: #fff;
+        font-size: 18px;
+    }
 
+ 
+}
     
 
 @media screen and (max-width:770px){
     .title-text h1{
-        font-size: 14px;
+        font-size: 12px;
         text-transform: uppercase;
     }
 
@@ -562,7 +473,7 @@ a:hover{
 
 #service{
     width: 100%;
-    padding: 70px 0;
+    padding: 40px 0;
     background: #efefef;
 }
 
@@ -571,7 +482,7 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* margin: auto; */
+
     
 }
 
@@ -583,13 +494,15 @@ a:hover{
     margin-bottom: 20px;
     color: #fff;
     position: relative;
+    margin-left: 0px;
 
 }
 
 .single-service img{
     width: 335px;
     border-radius: 7px;
-    height: 200px;  
+    height: 200px; 
+    margin-left: 0px; 
 }
 
 
@@ -684,70 +597,6 @@ hr{
     
 }
 
-
-
-/* Testimonial */
-.testimonaial{
-    width: 100%;
-    padding: 70px 0;
-
-}
-
-.testimonial-raw {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.testimonial-column{
-    flex-basis: 30%;
-    padding: 10px;
-    margin-bottom: 30px;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px 3px #00968814;
-    cursor: pointer;
-    transition: transform .5s;
-
-}
-
-.testimonial-column p{
-    font-size: 14px;
-}
-
-.user{
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.user img{
-    width: 40px;
-    margin-right: 20px;
-    border-radius: 3px;
-}
-
-.user-info .fa{
-    margin-left: 10px;
-    color: #27c0ff;
-    font-size: 20px;
-}
-
-.user-info  small{
-    color: #009688;
-}
-
-.testimonial-column:hover{
-    transform: translateY(7px); /*its going up by 7px -7px going down*/
-}
-
-@media screen and (max-width:770px){
-    .testimonial-column{
-        flex-basis: 100%;
-    }
-}
 
 /* Footer */
 
