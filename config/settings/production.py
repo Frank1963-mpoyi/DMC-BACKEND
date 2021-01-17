@@ -7,13 +7,7 @@ from        decouple            import          config
 
 DEBUG               = config('DEBUG')
 
-ALLOWED_HOSTS       = ['127.0.0.1', 'westerncapedmc.herokuapp.com']
-
-
-DATABASES['default'] =  dj_database_url.config()
-
-
-
+ALLOWED_HOSTS       = ['*']
 
 
 
@@ -69,8 +63,18 @@ SECURE_FRAME_DENY               = True
 
 STATICFILES_STORAGE             = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':     config('DB_NAME'),
+        'USER':     config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST':     config('DB_HOST') 
+    }
+}
 
-prod_db                          =  dj_database_url.config(conn_max_age=500)
+
+prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
 ENVIRONMENT = 'PRODUCTION'

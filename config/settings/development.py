@@ -1,7 +1,7 @@
 
-import configparser
-import      dj_database_url
-from .base import *
+import          configparser
+import          dj_database_url
+from            .base               import *
 
 
 DEBUG = True
@@ -20,9 +20,6 @@ DEBUG = True
 
 
 
-#DATABASE = {'default': dj_database_url.config(default='postgres://postgres:paulin63@localhost:5432/capetowndmc')}
-
-
 
 CONFIG_DIR = os.path.join(BASE_DIR, 'config/')
 
@@ -35,7 +32,7 @@ parser.read_file(open(os.path.join(CONFIG_DIR, 'app.ini')))
 #Done with postgresql 
 DATABASES = {
     'default': {
-        'ENGINE'    : 'django.db.backends.postgresql',
+        'ENGINE'    : 'django.db.backends.postgresql_psycopg2',
         'NAME'      : parser.get('capetowndmc', 'name'),
         'USER'      : parser.get('capetowndmc', 'user'),
         'PASSWORD'  : parser.get('capetowndmc', 'password'),

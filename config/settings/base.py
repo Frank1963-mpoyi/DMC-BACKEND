@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(
 
 SECRET_KEY      = config('SECRET_KEY')
 
-ALLOWED_HOSTS   = ['127.0.0.1', 'westerncapedmc.herokuapp.com']
+ALLOWED_HOSTS   = ['*']
 
 
 
