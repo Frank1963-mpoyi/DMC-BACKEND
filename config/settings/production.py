@@ -9,7 +9,7 @@ DEBUG               = config('DEBUG')
 
 ALLOWED_HOSTS       = ['*']
 
-
+DATABASES['default'] =  dj_database_url.config()
 
 
 
