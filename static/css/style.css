@@ -331,15 +331,6 @@ body{
 
 }
 
-.title {
-    text-align: center;
-    color: #fff;
-    font-weight: 100;
-    background: #009688;
-    padding: 45px;
-    /* font-family: 'East Sea Dokdo', cursive; */
-    font-family: 'Kaushan Script', cursive; 
-}
 
 .feature-box{
     width: 90%;
